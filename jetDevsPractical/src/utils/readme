@@ -1,0 +1,99 @@
+/**
+ * This folder can be used to define small re-usable functions
+ * e.g: any kind of calculations, string operations etc
+ */
+
+/**
+ *
+    ---------------*************--------------
+1. ListItem
+
+Description
+    The ListItem component takes a prop called items (Name, photo, location, Phone, Gender, onFav, isFav),
+which is assumed to be an object with property. You can customize this based on the structure of your data.
+Here is Describe to all thing related Random user and we uses in multiple Places.
+
+Usage
+    The ListItem component uses in 2 tabs one in home tab to list out all random user.
+also use in favorite tab to show favorite user list.
+
+Functions
+-> React.memo(ListItem)
+    we use React.memo for make power pull render and work as speed.
+this function get benefits to prevent re-render item component if proper is not change and will be make power full.
+
+
+How to Use
+    Make a proper design of that item and user in FlatList component which provide one item view list our in dynamic in screen.
+
+        ---------------*************--------------
+
+2. Loader
+
+Description
+    The Loader Component take a prop called isLoading and working as multiple Places.
+This Component show for user Perspective to see data will come in shortly.
+
+Usage
+    The Loader Component use in Pagination loading new more data.
+
+    ---------------*************--------------
+3. UserInput
+
+Desctiption
+    The UserInput Component take a prop called there styles and use as a different design and handle easily and reduce code of that component.
+
+Usage
+    The UserInput component use in Login screen to access all app and handle there condition like UserId and password.
+
+Functions
+-> doLogin
+    This function use for get email and password and match with proper format and also match with static email and password. 
+
+-> validateEmail
+    This function use for check email format is perfect or not for with regex Tool
+
+-> validatePassword
+    This function use for check password is perfect or not like length for password.
+
+-> use Navigation Reset()
+   This function use for reset navigation prevent previous screen after login not come again login screen.
+
+   ---------------*************--------------
+
+4. Models
+ 
+Description
+    The Models use for make proper format in data and easily use and handle with it.
+also use for needed data from object using model and also increase speed in development.
+
+Usage
+    This Models we can use as make one type of interface and describe needed property and use in ListItem, also show proper format.
+
+   ---------------*************--------------
+
+5. Colors
+
+Description
+   This Colors also handle for easily handle with set color and easily change because we use multiple places.
+
+
+   ---------------*************--------------**************-----------
+
+1. We create Favorite and unFavorite Logic
+    we have handle that logic in redux because redux is one tools where handle regarding all project and use in whole project so it will be very easy
+we have use Set() function to use for handle too much data in list and array because Set function will create array to unique data and easily we can remove and add and check that data are available or not
+here is Ex.
+    const newSetPreviousData = new Set(previousData);
+    convert array to Unique data
+we have use easily has, delete that data after that this data we convert in regular array.
+
+has() -> this function for check item is already in array or not.
+delete() -> this function for remove item from array.
+
+2. pull to refresh
+   when user can refresh that data then we set our pagination page index is 0 and check in redux logic if pagination index is 0 then clear all data set new data as 0 pagination index.
+
+3. pagination
+   For pagination Flatlist is provide onEndReached or not when that lister call then I increase Page +1 and useState check that value change and that according data will come using api call and handle in redux. 
+*/
